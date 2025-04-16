@@ -1,0 +1,28 @@
+{
+  "name": "music-app-backend",
+  "version": "1.0.0",
+  "description": "music-backend/\r │\r ├── controllers/\r │   ├── authController.js        // Auth Login/Register\r │   └── musicController.js       // Upload & Fetch Music\r │\r ├── models/\r │   ├── User.js                  // User Schema with role\r │   └── Music.js                 // Music Schema\r │\r ├── routes/\r │   ├── authRoutes.js            // POST /register /login\r │   └── musicRoutes.js           // POST /upload, GET /all\r │\r ├── middlewares/\r │   ├── auth.js                  // JWT Authorize\r │   └── role.js                  // Role Check Middleware\r │\r ├── config/\r │   ├── db.js                    // MongoDB Connection\r │   └── cloudinary.js           // Cloudinary Setup\r │\r ├── .env                         // Environment Variables\r ├── server.js                    // Entry Point\r ├── package.json\r └── README.md (optional)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.2",
+    "multer": "^1.4.5-lts.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
