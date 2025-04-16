@@ -4,7 +4,12 @@ const bcrypt = require("bcryptjs");
 // Get user profile
 const getUserProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select("-password");
+    const user = await User.findById(req.user.id)
+      .select("-password")
+      .populate({
+        path: "downloadHistory.song",
+        select: "title artist image category"
+      });
     res.json({ user });
   } catch (error) {
     console.error("Get profile error:", error.message);
